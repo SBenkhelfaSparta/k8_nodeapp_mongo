@@ -5,9 +5,8 @@ metadata:
   name: mongo-deployment
   labels:
     app: database
-	
+
 spec:
   clusterIP: None
   selector:
     app: database
-	
