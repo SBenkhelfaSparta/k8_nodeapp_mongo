@@ -20,3 +20,8 @@
 - `kubectl edit svc nginx-deployment` will open editing for the service 
 - load balancer, cluster ip or node ports can be used for services
 - `kubectl delete deploy nginx-deployment` and `kubectl delete svc nginx-deployment` are used to get rid of a service and its pods
+
+## In a Nutshell
+- `kubectl create -f mongo-deployment.yml`
+- `kubectl create -f nginx_k8_deploy.yml`
+- `kubectl delete deploy node`
