@@ -1,5 +1,7 @@
 # Running Apps using Kubernetes
 
+![img](diag.png)
+
 ## Setup
 - Make sure Kubernetes is enabled on Docker's settings. This process could take a while to enable.
 - `kubectl` will give commands available and check if install was correctly done, and default clusters can be seen in the Docker app
@@ -25,3 +27,18 @@
 - `kubectl create -f mongo-deployment.yml`
 - `kubectl create -f nginx_k8_deploy.yml`
 - `kubectl delete deploy node`
+
+## What Is a Cron Job?
+cron is a Linux utility that schedules a command or script on your server to run automatically at a specified time and date. A cron job is the scheduled task itself. Cron jobs can be very useful to automate repetitive tasks.
+
+For example, you can set a cron job to delete temporary files every week to conserve your disk space. Some programs, such as Drupal, may require you to set up a cron job to perform certain functions.
+
+Scripts executed as a cron job are typically used to modify files or databases. However, they can perform other tasks that do not modify data on the server, like sending out email notifications.
+
+## Horizontal Pod Autoscaler
+The Horizontal Pod Autoscaler automatically scales the number of Pods in a replication controller, deployment, replica set or stateful set based on observed CPU utilization (or, with custom metrics support, on some other application-provided metrics). Note that Horizontal Pod Autoscaling does not apply to objects that can't be scaled, for example, DaemonSets.
+
+The Horizontal Pod Autoscaler is implemented as a Kubernetes API resource and a controller. The resource determines the behavior of the controller. The controller periodically adjusts the number of replicas in a replication controller or deployment to match the observed metrics such as average CPU utilisation, average memory utilisation or any other custom metric to the target specified by the user.
+
+For more information check out the official documentation at https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
+
